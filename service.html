@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service - Neil Bein Vargas</title>
+  <link rel="stylesheet" href="service.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #0f172a;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      background-color: #0f172a;
+    }
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+    nav ul li a:hover {
+      background-color: #22c55e;
+      color: white;
+      transform: translateY(-2px);
+    }
+    nav ul li a.active {
+      background-color: #22c55e;
+      color: rgb(0, 0, 0);
+    }
+
+    main {
+      flex: 1;
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #22c55e;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 15px #164e0f50;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .service-card:hover {
+      background: #22c55e;
+      color: black;
+      box-shadow: 0 0 20px #22c55e;
+    }
+
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: inherit;
+      text-align: center;
+    }
+
+    .service-title {
+      font-size: 1.4em;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .service-desc {
+      font-size: 1em;
+      line-height: 1.5;
+      text-align: center;
+      color: inherit;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #1e293b;
+      color: #888;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+      nav ul {
+        gap: 15px;
+      }
+      main {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo" onclick="window.location.href='home.html'">Neil.</div>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="service.html" class="active">Service</a></li>
+      <li><a href="cert.html">Certificates</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>My Services</h1>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <div class="service-title">Web Development</div>
+      <div class="service-desc">Creating responsive and modern websites tailored to your business needs.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎨</div>
+      <div class="service-title">UI/UX Design</div>
+      <div class="service-desc">Designing user-friendly interfaces to enhance user experience and engagement.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <div class="service-title">Website Maintenance</div>
+      <div class="service-desc">Keeping your website updated, secure, and running smoothly 24/7.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📱</div>
+      <div class="service-title">Responsive Design</div>
+      <div class="service-desc">Ensuring your website looks great and functions perfectly on all devices.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚀</div>
+      <div class="service-title">Performance Optimization</div>
+      <div class="service-desc">Improving website speed and performance for better user retention.</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Neil Bein Vargas. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neil Bein Vargas - Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #0f172a;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      background-color: #0f172a;
+    }
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    header nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    header nav ul li a:hover,
+    header nav ul li a.active {
+      color: #0b0f07;
+      background-color: #22c55e;
+    }
+
+    /* Main content */
+    main {
+      flex-grow: 1;
+      padding: 60px 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #22c55e;
+    }
+
+    /* Filter Buttons */
+    .filter-container {
+      margin-bottom: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 2px solid #22c55e;
+      color: #22c55e;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background-color: #22c55e;
+      color: black;
+    }
+
+    /* Portfolio Grid */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .portfolio-item {
+      background-color: #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgb(34 197 94 / 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .portfolio-item:hover {
+      transform: translateY(-8px);
+    }
+    .portfolio-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 3px solid #22c55e;
+    }
+    .portfolio-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .portfolio-title {
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #22c55e;
+    }
+    .portfolio-desc {
+      flex-grow: 1;
+      color: #ccc;
+      font-size: 0.95em;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+    .btn-details {
+      background-color: #22c55e;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 5px;
+      font-weight: 600;
+      color: black;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+    }
+    .btn-details:hover {
+      background-color: #16a34a;
+    }
+
+    /* Responsive tweaks */
+    @media(max-width: 768px) {
+      header {
+        padding: 20px 30px;
+      }
+      main {
+        padding: 40px 30px 30px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+    }
+    @media(max-width: 480px) {
+      header nav ul {
+        gap: 15px;
+      }
+      .filter-container {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo" onclick="window.location.href='home.html'">Neil.</div>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="cert.html">Certificates</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>My Portfolio</h1>
+
+  <div class="filter-container">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="mobile">Mobile</button>
+    <button class="filter-btn" data-filter="design">Design</button>
+  </div>
+
+  <div class="portfolio-grid">
+    <a href="p1.html" class="portfolio-item" data-category="web" tabindex="0">
+      <img src="v.jpg" alt="Project 1" class="portfolio-img" />
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Responsive Website</h3>
+        <p class="portfolio-desc">A fully responsive website built with HTML, CSS, and JS.</p>
+        <span class="btn-details">View Details</span>
+      </div>
+    </a>
+    <a href="p2.html" class="portfolio-item" data-category="mobile" tabindex="0">
+      <img src="b.jpg" alt="Project 2" class="portfolio-img" />
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Mobile App UI</h3>
+        <p class="portfolio-desc">Clean and intuitive mobile app interface design.</p>
+        <span class="btn-details">View Details</span>
+      </div>
+    </a>
+    <a href="p3.html" class="portfolio-item" data-category="design" tabindex="0">
+      <img src="c.jpg" alt="Project 3" class="portfolio-img" />
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Brand Identity</h3>
+        <p class="portfolio-desc">Logo and brand identity design for a startup.</p>
+        <span class="btn-details">View Details</span>
+      </div>
+    </a>
+    <a href="p4.html" class="portfolio-item" data-category="web" tabindex="0">
+      <img src="d.jpg" alt="Project 4" class="portfolio-img" />
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">E-commerce Platform</h3>
+        <p class="portfolio-desc">Online shop with payment integration.</p>
+        <span class="btn-details">View Details</span>
+      </div>
+    </a>
+    <a href="p5.html" class="portfolio-item" data-category="design" tabindex="0">
+      <img src="e.jpg" alt="Project 5" class="portfolio-img" />
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Poster Design</h3>
+        <p class="portfolio-desc">Creative poster for a marketing campaign.</p>
+        <span class="btn-details">View Details</span>
+      </div>
+    </a>
+  </div>
+</main>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" aria-label="Close modal">&times;</button>
+    <img src="" alt="" id="modal-img"/>
+    <h2 id="modal-title"></h2>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+
+<script>
+  // Optional: Add filter functionality if you want
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      portfolioItems.forEach(item => {
+        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

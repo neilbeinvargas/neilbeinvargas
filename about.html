@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Neil Bein Vargas</title>
+  <link rel="stylesheet" href="about.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* (All your existing styles remain unchanged) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      background-color: #0f172a;
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: inline-block;
+      position: relative;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #22c55e;
+      color: black;
+      box-shadow: 0 4px 10px rgba(34, 197, 94, 0.5);
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      padding: 60px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-img-wrapper {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      transform: translateY(-300px); /* <-- This moves the picture up */
+    }
+
+    .rotating-border {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 6px solid transparent;
+      border-top-color: #22c55e;
+      border-right-color: #22c55e;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      animation: spin 4s linear infinite;
+      box-shadow:
+        0 0 8px 2px #22c55e,
+        0 0 15px 4px #22c55e80;
+    }
+
+    .about-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .about-content {
+      max-width: 600px;
+    }
+
+    .about-content h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .about-content h2 {
+      font-size: 1.5em;
+      color: #22c55e;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: #ccc;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      font-size: 1em;
+    }
+
+    .about-content h3 {
+      margin-bottom: 10px;
+      color: #22c55e;
+    }
+
+    .skills {
+      margin-top: 20px;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills ul li {
+      background: #1e293b;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: 1px solid #22c55e;
+      transition: background 0.3s ease, color 0.3s ease;
+      cursor: default;
+      user-select: none;
+    }
+
+    .skills ul li:hover {
+      background-color: #22c55e;
+      color: black;
+    }
+
+    blockquote {
+      color: #ccc;
+      font-style: italic;
+      border-left: 4px solid #22c55e;
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 1px solid #1e293b;
+      color: #888;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .about-img-wrapper {
+        width: 260px;
+        height: 260px;
+        transform: translateY(-30px); /* Adjust for smaller screen */
+      }
+
+      .rotating-border {
+        width: 260px;
+        height: 260px;
+      }
+
+      .about-content {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo" onclick="window.location.href='home.html'">Neil.</div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="cert.html">Certificates</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-container">
+    <div class="about-img-wrapper">
+      <div class="rotating-border"></div>
+      <img src="n.jfif" alt="Neil Bein Vargas" />
+    </div>
+    <div class="about-content">
+      <h1>Neil Bein Vargas</h1>
+      <h2>Web Developer & Designer</h2>
+      <p>Hello! I'm Neil, a passionate web developer who loves turning ideas into reality through modern and clean design. I focus on creating user-friendly websites that perform great on all devices.</p>
+      
+      <h3>Mission</h3>
+      <p>To build elegant, functional websites that make an impact and help businesses or individuals grow their digital presence with style.</p>
+
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Responsive Design</li>
+          <li>UI/UX</li>
+          <li>Graphic Design</li>
+        </ul>
+      </div>
+
+      <h3>Education</h3>
+      <p>Bachelor of Science in Information System of Southern Luzon Technological College Foundation Inc.</p>
+
+      <h3>Experience</h3>
+      <p>Freelance Web Developer — 2023 to Present</p>
+      <ul style="margin-bottom: 20px;">
+        <li>Created responsive websites for local businesses</li>
+        <li>Developed personal portfolio and product landing pages</li>
+      </ul>
+
+      <h3>Hobbies & Interests</h3>
+      <p>When I'm not coding, I enjoy drawing, playing guitar, exploring new design trends, gaming, and photography.</p>
+
+      <h3>Quote I Live By</h3>
+      <blockquote>"Code is like humor. When you have to explain it, it’s bad." – Cory House</blockquote>
+
+      <h3>Let's Work Together</h3>
+      <p>If you're looking for a dedicated developer for your next project, feel free to <a href="contact.html" style="color: #22c55e;">reach out</a>. I'm always open to collaborations and new opportunities.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Neil Bein Vargas. All rights reserved.
+  </footer>
+
+</body>
+</html>
